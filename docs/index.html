@@ -30,16 +30,17 @@
         <a class="dismiss">🗙</a>
     </div>
     <script>
-        window.__blazorBaseHref = document.baseURI;
+        window._blazorBase = document.baseURI.replace(/\/+$/, '');
     </script>
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script>
         Blazor.start({
             loadBootResource: function (type, name, defaultUri, integrity) {
-                return window.__blazorBaseHref + defaultUri;
+                const cleanUri = defaultUri.replace(/^\/+/, "");
+                return window._blazorBase + "/" + cleanUri;
             }
         });
-        navigator.serviceWorker.register('service-worker.js');
+        navigator.serviceWorker.register('./service-worker.js');
     </script>
 </body>
 
