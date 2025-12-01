@@ -1,6 +1,6 @@
 {
-  "name": "cv",
-  "short_name": "cv",
+  "name": "CV-generator",
+  "short_name": "CV-generator",
   "id": "./",
   "start_url": "./",
   "display": "standalone",
