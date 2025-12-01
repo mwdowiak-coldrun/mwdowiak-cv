@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cv", "cv\cv.csproj", "{FE23F663-3AB7-491D-854D-250617953244}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CvGen", "CvGen\CvGen.csproj", "{7D9E97BE-3909-4EC3-9E3B-C07BD2C06699}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FE23F663-3AB7-491D-854D-250617953244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE23F663-3AB7-491D-854D-250617953244}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE23F663-3AB7-491D-854D-250617953244}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE23F663-3AB7-491D-854D-250617953244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D9E97BE-3909-4EC3-9E3B-C07BD2C06699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D9E97BE-3909-4EC3-9E3B-C07BD2C06699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D9E97BE-3909-4EC3-9E3B-C07BD2C06699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D9E97BE-3909-4EC3-9E3B-C07BD2C06699}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
