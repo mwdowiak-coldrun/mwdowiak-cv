@@ -17,7 +17,7 @@ public partial class CvSkill : ComponentBase
 
     private string GetMarginClass(int value) => value > 1 ? "ml-2" : "";
 
-    private string GetColorVariable() => $"--dot-color: var({Color.GetCssVariable()}";
+    private string GetColorVariable() => $"--dot-color: var({Color.GetCssVariable()})";
 }
 
 public record Skill(
