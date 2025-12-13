@@ -1,0 +1,13 @@
+<div class="@Class d-inline-flex flex-column">
+    <div>
+        <MudText>@Model.Label</MudText>
+    </div>
+    <div class="d-flex">
+        @for (int i = 1; i <= Model.MaxLevel; i++)
+        {
+            <div class="@GetDotClasses(i)"
+                 style="@GetColorVariable()">
+            </div>
+        }
+    </div>
+</div>

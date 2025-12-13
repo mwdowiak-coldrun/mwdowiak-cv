@@ -1,0 +1,19 @@
+.skill-label {
+    width: 120px;
+    font-weight: bold;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 0;
+}
+
+.filled {
+    background-color: var(--dot-color);
+}
+
+.empty {
+    border: 1px solid var(--dot-color);
+}
