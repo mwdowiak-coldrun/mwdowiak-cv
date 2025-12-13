@@ -1,6 +1,28 @@
 ﻿@page "/"
 
+@using System.Collections.Immutable
+@using CvGen.Components.CvSkill
+@using CvGen.Components.CvSkillsSection
+
+@{
+    var skills = new Skill[]
+    {
+        Skill.Create("C#", 4, 5, "I am good a C#"),
+        Skill.Create("SQL", 3, 5, "I am good a SQL"),
+        Skill.Create("Azure", 2, 5, "I am good a Azure"),
+        Skill.Create("Blazor", 1, 5, "I am good a Blazor"),
+        Skill.Create("TypeScript", 1, 5, "I am good a TypeScript"),
+        Skill.Create("Architecture", 1, 5, "I am good a Architecture"),
+    }.ToImmutableArray();
+}
+
 <PageTitle>Home</PageTitle>
+
+<br>
+
+<CvSkillsSection Model="@skills"/>
+
+<br>
 
 <MudText Typo="Typo.h3" GutterBottom="true">Hello, world!</MudText>
 <MudText Class="mb-8">Welcome to your new app, powered by MudBlazor and the .NET 9 Template!</MudText>
