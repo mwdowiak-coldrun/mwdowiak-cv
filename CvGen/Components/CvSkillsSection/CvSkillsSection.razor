@@ -1,0 +1,20 @@
+@using CvGen.Components.CvSkill
+
+<div>
+    <MudPaper Outlined="true"
+              Class="pa-4 rounded-lg">
+        <MudText Typo="Typo.h6"
+                 Color="Color.Primary">
+            Skills
+        </MudText>
+        <hr/>
+        @for (var i = 0; i < Model.Length; i++)
+        {
+            var skill = Model[i];
+            <CvSkill Model="@skill"
+                     Color="@Color"
+                     Class="@GetMarginClass(i)"/>
+        }
+    </MudPaper>
+
+</div>
