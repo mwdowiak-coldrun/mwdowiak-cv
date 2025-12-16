@@ -1,0 +1,22 @@
+@using CvGen.Components.CvExperience
+
+<div>
+    <MudPaper Outlined="true"
+              Class="pa-4 rounded-lg">
+        <MudText Typo="Typo.h6"
+                 Color="Color.Primary">
+            Experience
+        </MudText>
+        <hr/>
+        <MudTimeline TimelinePosition="TimelinePosition.Start"
+                     TimelineAlign="TimelineAlign.Default"
+                     Modifiers="false">
+            @foreach (var experience in Model)
+            {
+                <MudTimelineItem Color="Color.Primary">
+                    <CvExperience Model=@experience />
+                </MudTimelineItem>
+            }
+        </MudTimeline>
+    </MudPaper>
+</div>

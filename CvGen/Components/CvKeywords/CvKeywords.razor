@@ -1,0 +1,20 @@
+@using System.Collections.Immutable
+@using System.Linq
+
+@code {
+    [Parameter] public required ImmutableArray<string> Keywords { get; set; }
+    [Parameter] public string Class { get; set; } = string.Empty;
+
+    private static string BuildClassString(int i) => $"Class py-0 {(i > 0 ? "ml-1" : "ml-0")}";
+}
+
+@foreach (var (keyword, i) in Keywords.Select((k, idx) => (k, idx)))
+{
+    <MudChip Variant="Variant.Outlined"
+             Color="Color.Secondary"
+             Size="Size.Small"
+             Class="@BuildClassString(i)"
+             T="string">
+        @keyword
+    </MudChip>
+}

@@ -1,29 +1,72 @@
 ﻿@page "/"
 
 @using System.Collections.Immutable
+@using CvGen.Components.CvExperience
+@using CvGen.Components.CvExperienceSection
 @using CvGen.Components.CvSkill
 @using CvGen.Components.CvSkillsSection
 
 @{
-    var skills = new Skill[]
-    {
+    ImmutableArray<Skill> skills = [
         Skill.Create("C#", 4, 5, "I am good a C#"),
         Skill.Create("SQL", 3, 5, "I am good a SQL"),
         Skill.Create("Azure", 2, 5, "I am good a Azure"),
         Skill.Create("Blazor", 1, 5, "I am good a Blazor"),
         Skill.Create("TypeScript", 1, 5, "I am good a TypeScript"),
         Skill.Create("Architecture", 1, 5, "I am good a Architecture"),
+    ];
+
+    var experience = new Experience[]
+    {
+        Experience.Default with
+        {
+            Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            Keywords = ["C#", "Blazor", "EF"],
+            Projects = [
+                Project.Default with
+                {
+                    Description = " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    Keywords = ["C#", "Blazor", "EF"]
+                },
+                Project.Default with
+                {
+                    Description = " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    Keywords = ["Java", "Vue", "MongoDB"]
+                }
+            ]
+        },
+        Experience.Default with { Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." },
+        Experience.Default with
+        {
+            Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            Keywords = ["C#", "Blazor", "EF"]
+        },
+        Experience.Default with
+        {
+            Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            Projects = [
+                Project.Default with
+                {
+                    Description = " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    Keywords = ["C#", "Blazor", "EF"]
+                },
+                Project.Default with
+                {
+                    Description = " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    Keywords = ["Java", "Vue", "MongoDB"]
+                }
+            ]
+        },
     }.ToImmutableArray();
 }
 
 <PageTitle>Home</PageTitle>
 
 <br>
-
 <CvSkillsSection Model="@skills"/>
-
 <br>
-
+<CvExperienceSection Model="@experience"/>
+<br>
 <MudText Typo="Typo.h3" GutterBottom="true">Hello, world!</MudText>
 <MudText Class="mb-8">Welcome to your new app, powered by MudBlazor and the .NET 9 Template!</MudText>
 
