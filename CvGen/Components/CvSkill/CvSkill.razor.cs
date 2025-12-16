@@ -34,5 +34,5 @@ public record Skill(
         string? description = null
     ) => new(label, level, maxLevel, description);
 
-    public static Skill Empty => Create("Skill", 1, 5);
+    public static Skill Default => Create("Skill", 1, 5);
 }
