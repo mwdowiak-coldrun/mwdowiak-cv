@@ -1,0 +1,20 @@
+/* /Components/CvSkill/CvSkill.razor.rz.scp.css */
+.skill-label[b-p1t3sncsgr] {
+    width: 120px;
+    font-weight: bold;
+}
+
+.dot[b-p1t3sncsgr] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 0;
+}
+
+.filled[b-p1t3sncsgr] {
+    background-color: var(--dot-color);
+}
+
+.empty[b-p1t3sncsgr] {
+    border: 1px solid var(--dot-color);
+}
